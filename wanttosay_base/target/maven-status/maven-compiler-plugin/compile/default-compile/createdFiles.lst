@@ -1,0 +1,5 @@
+BaseApplication.class
+com\hydu\dao\LabelDao.class
+com\hydu\controller\LabelController.class
+com\hydu\service\LabelService.class
+com\hydu\entity\Label.class
