@@ -3,6 +3,9 @@ package com.hydu.service;
 import com.hydu.dao.LabelDao;
 import com.hydu.entity.Label;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import util.IdWorker;
@@ -75,5 +78,29 @@ public class LabelService {
                 return cb.and(parr);
             }
         });
+    }
+
+    public Page<Label> pageQuery(Label label,int page,int size){
+        Pageable pageable = PageRequest.of(page-1,size);//从第0页开始
+        return labelDao.findAll(new Specification<Label>(){
+            @Override
+            public Predicate toPredicate(Root<Label> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder cb) {
+                //new一个集合，存放所有的条件
+                List<Predicate> list=new ArrayList<>();
+                if (label.getLabelname()!=null && !"".equals(label.getLabelname())){
+                    Predicate predocate=  cb.like(root.get("labelname").as(String.class),"%"+label.getLabelname()+"%");//  label.getLabelname like %...%
+                    list.add(predocate);
+                }
+                if(label.getState()!=null && !"".equals(label.getState())){
+                    Predicate predocate=  cb.like(root.get("state").as(String.class),label.getState());//  label.getState = 1
+                    list.add(predocate);
+                }
+                //new一个数组作为最终返回的条件
+                Predicate[] parr=new Predicate[list.size()];//空值
+                parr=list.toArray(parr);
+                return cb.and(parr);
+            }
+        },pageable);
+
     }
 }

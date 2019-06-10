@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="552b1858-de64-4102-a69d-657822ba562d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../wanttosay/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/BaseExceptiomHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wanttosay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wanttosay/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/service/LabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/service/LabelService.java" afterDir="false" />
@@ -26,7 +24,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_common/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="209">
               <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
             </state>
           </provider>
@@ -59,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseApplication.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/BaseApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="266">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,7 +72,7 @@
       <file leaf-file-name="Label.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/entity/Label.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="171">
               <caret line="12" column="28" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -119,19 +117,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LabelService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LabelService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/service/LabelService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+            <state relative-caret-position="1824">
+              <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
-                <element signature="e#621#622#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#909#910#0" expanded="true" />
-                <element signature="e#951#952#0" expanded="true" />
-                <element signature="e#1005#1006#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,8 +132,8 @@
       <file leaf-file-name="LabelController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+            <state relative-caret-position="482">
+              <caret line="74" column="52" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,12 +144,10 @@
       <file leaf-file-name="BaseExceptiomHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/BaseExceptiomHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="95">
               <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#370#371#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -192,7 +182,9 @@
         <option value="$PROJECT_DIR$/wanttosay_base/src/main/java/com/hydu/BaseApplication.java" />
         <option value="$PROJECT_DIR$/wanttosay_base/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/wanttosay_base/src/main/java/com/hydu/entity/Label.java" />
-        <option value="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/BaseExceptiomHandler.java" />
+        <option value="$PROJECT_DIR$/wanttosay_base/src/main/java/com/hydu/controller/BaseExceptiomHandler.java" />
+        <option value="$PROJECT_DIR$/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java" />
+        <option value="$PROJECT_DIR$/wanttosay_base/src/main/java/com/hydu/service/LabelService.java" />
         <option value="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java" />
         <option value="$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/service/LabelService.java" />
       </list>
@@ -268,9 +260,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="635" />
-    <option name="y" value="41" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="673" />
+    <option name="y" value="3" />
     <option name="width" value="697" />
     <option name="height" value="736" />
   </component>
@@ -279,9 +271,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,111 +283,37 @@
             <path>
               <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
               <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
+              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
               <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
+              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
               <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
+              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
               <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
+              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hydu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
               <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
+              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hydu" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hydu" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hydu" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hydu" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_base" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wanttosay" type="462c0819:PsiDirectoryNode" />
-              <item name="wanttosay_common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wanttosay" type="b2602c69:ProjectViewProjectNode" />
@@ -411,6 +328,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -504,15 +422,16 @@
       <option name="presentableId" value="Default" />
       <updated>1559136440274</updated>
       <workItem from="1559136447763" duration="6028000" />
-      <workItem from="1559308709993" duration="4083000" />
+      <workItem from="1559308709993" duration="4173000" />
+      <workItem from="1560168268361" duration="3853000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10111000" />
+    <option name="totallyTimeSpent" value="14054000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="635" y="41" width="697" height="736" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -533,10 +452,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27529022" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27168575" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08948195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22995462" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -556,6 +475,118 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_common/src/main/java/entity/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_common/src/main/java/util/IdWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/BaseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/entity/Label.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#842#843#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1070#1071#0" expanded="true" />
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#1188#1189#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/dao/LabelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1102">
+          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/BaseExceptiomHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/service/LabelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../wanttosay/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1748">
@@ -641,12 +672,6 @@
           <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -717,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="209">
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
         </state>
       </provider>
@@ -726,26 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/dao/LabelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/BaseApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -758,20 +763,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/BaseExceptiomHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="95">
           <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="65" column="43" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -780,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/entity/Label.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="171">
           <caret line="12" column="28" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -814,16 +807,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/service/LabelService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="1824">
+          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
-            <element signature="e#621#622#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/dao/LabelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/controller/LabelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="74" column="52" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../wanttosay/wanttosay_base/src/main/java/com/hydu/BaseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
