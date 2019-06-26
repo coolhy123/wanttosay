@@ -1,0 +1,13 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: wanttosay_recruit
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wanttosay_recruit
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    database: mysql

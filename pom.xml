@@ -11,6 +11,7 @@
     <modules>
         <module>wanttosay_common</module>
         <module>wanttosay_base</module>
+        <module>wanttosay_recruit</module>
     </modules>
 
 
@@ -48,6 +49,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
         </dependency>
     </dependencies>
 
