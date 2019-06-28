@@ -12,6 +12,7 @@
         <module>wanttosay_common</module>
         <module>wanttosay_base</module>
         <module>wanttosay_recruit</module>
+        <module>wanttosay_qa</module>
     </modules>
 
 
