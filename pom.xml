@@ -13,6 +13,7 @@
         <module>wanttosay_base</module>
         <module>wanttosay_recruit</module>
         <module>wanttosay_qa</module>
+        <module>wanttosay_article</module>
     </modules>
 
 

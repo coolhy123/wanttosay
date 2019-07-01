@@ -115,40 +115,41 @@ public class RecruitService {
             @Override
             public Predicate toPredicate(Root<Recruit> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder cb) {
                 List<Predicate> predicateList =new ArrayList<>();
-                if(StringUtils.isBlank((String)searchMap.get("id"))){
+                if(!StringUtils.isBlank((String)searchMap.get("id"))){
                     predicateList.add(cb.like(root.get("id").as(String.class),"%"+searchMap.get("id")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("jobname"))){
+                if(!StringUtils.isBlank((String)searchMap.get("jobname"))){
                     predicateList.add(cb.like(root.get("jobname").as(String.class),"%"+searchMap.get("jobname")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("salary"))){
+                if(!StringUtils.isBlank((String)searchMap.get("salary"))){
                     predicateList.add(cb.like(root.get("salary").as(String.class),"%"+searchMap.get("salary")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("education"))){
+                if(!StringUtils.isBlank((String)searchMap.get("education"))){
                     predicateList.add(cb.like(root.get("education").as(String.class),"%"+searchMap.get("education")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("address"))){
+                if(!StringUtils.isBlank((String)searchMap.get("address"))){
+
                     predicateList.add(cb.like(root.get("address").as(String.class),"%"+searchMap.get("address")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("eid"))){
+                if(!StringUtils.isBlank((String)searchMap.get("eid"))){
                     predicateList.add(cb.like(root.get("eid").as(String.class),"%"+searchMap.get("eid")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("type"))){
+                if(!StringUtils.isBlank((String)searchMap.get("type"))){
                     predicateList.add(cb.like(root.get("type").as(String.class),"%"+searchMap.get("type")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("url"))){
+                if(!StringUtils.isBlank((String)searchMap.get("url"))){
                     predicateList.add(cb.like(root.get("url").as(String.class),"%"+searchMap.get("url")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("label"))){
+                if(!StringUtils.isBlank((String)searchMap.get("label"))){
                     predicateList.add(cb.like(root.get("label").as(String.class),"%"+searchMap.get("label")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("content1"))){
+                if(!StringUtils.isBlank((String)searchMap.get("content1"))){
                     predicateList.add(cb.like(root.get("content1").as(String.class),"%"+searchMap.get("content1")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("content2"))){
+                if(!StringUtils.isBlank((String)searchMap.get("content2"))){
                     predicateList.add(cb.like(root.get("content2").as(String.class),"%"+searchMap.get("content2")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("rcondition"))){
+                if(!StringUtils.isBlank((String)searchMap.get("rcondition"))){
                     predicateList.add(cb.like(root.get("rcondition").as(String.class),"%"+searchMap.get("rcondition")+"%"));
                 }
                 return cb.and(predicateList.toArray(new Predicate[predicateList.size()]));

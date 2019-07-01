@@ -133,20 +133,20 @@ public class EnterpriseService {
                     predicateList.add(cb.like(root.get("summary").as(String.class),"%"+searchMap.get("summary")+"%"));
                 }
                 //标签
-                if(StringUtils.isBlank((String)searchMap.get("labels"))){
+                if(!StringUtils.isBlank((String)searchMap.get("labels"))){
                     predicateList.add(cb.like(root.get("labels").as(String.class),"%"+searchMap.get("labels")+"%"));
                 }
                 // // 坐标
-                if(StringUtils.isBlank((String)searchMap.get("coordinate"))){
+                if(!StringUtils.isBlank((String)searchMap.get("coordinate"))){
                     predicateList.add(cb.like(root.get("coordinate").as(String.class),"%"+searchMap.get("coordinate")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("ishot"))){
+                if(!StringUtils.isBlank((String)searchMap.get("ishot"))){
                     predicateList.add(cb.like(root.get("ishot").as(String.class),"%"+searchMap.get("ishot")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("logo"))){
+                if(!StringUtils.isBlank((String)searchMap.get("logo"))){
                     predicateList.add(cb.like(root.get("logo").as(String.class),"%"+searchMap.get("logo")+"%"));
                 }
-                if(StringUtils.isBlank((String)searchMap.get("url"))){
+                if(!StringUtils.isBlank((String)searchMap.get("url"))){
                     predicateList.add(cb.like(root.get("url").as(String.class),"%"+searchMap.get("url")+"%"));
                 }
                 return cb.and(predicateList.toArray(new Predicate[predicateList.size()]));//Predicate必须给定长度

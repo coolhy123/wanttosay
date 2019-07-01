@@ -1,0 +1,16 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: wanttosay_article
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wanttosay_article
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    database: mysql
+  redis:
+    host: localhost
+    port: 6379

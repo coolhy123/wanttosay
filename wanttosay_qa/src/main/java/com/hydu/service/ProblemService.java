@@ -147,41 +147,41 @@ public class ProblemService {
             public Predicate toPredicate(javax.persistence.criteria.Root<Problem> root, CriteriaQuery<?> cq, CriteriaBuilder cb) {
                 List<Predicate> predicateList =new ArrayList<>();
                 //id
-                if (StringUtils.isBlank((String)searchMap.get("id"))){
+                if (!StringUtils.isBlank((String)searchMap.get("id"))){
                     predicateList.add(cb.like(root.get("id").as(String.class),"%"+searchMap.get("id")+"%"));
                 }
                 //标题
-                if (StringUtils.isBlank((String)searchMap.get("title"))){
+                if (!StringUtils.isBlank((String)searchMap.get("title"))){
                     predicateList.add(cb.like(root.get("title").as(String.class),"%"+searchMap.get("title")+"%"));
                 }
                 //内容
-                if (StringUtils.isBlank((String)searchMap.get("content"))){
+                if (!StringUtils.isBlank((String)searchMap.get("content"))){
                     predicateList.add(cb.like(root.get("content").as(String.class),"%"+searchMap.get("content")+"%"));
                 }
                 //用户id
-                if (StringUtils.isBlank((String)searchMap.get("userid"))){
+                if (!StringUtils.isBlank((String)searchMap.get("userid"))){
                     predicateList.add(cb.like(root.get("userid").as(String.class),"%"+searchMap.get("userid")+"%"));
                 }
                 //昵称
-                if (StringUtils.isBlank((String)searchMap.get("nickname"))){
+                if (!StringUtils.isBlank((String)searchMap.get("nickname"))){
                     predicateList.add(cb.like(root.get("nickname").as(String.class),"%"+searchMap.get("nickname")+"%"));
                 }
                 //是否解决
-                if (StringUtils.isBlank((String)searchMap.get("solve"))){
+                if (!StringUtils.isBlank((String)searchMap.get("solve"))){
                     predicateList.add(cb.like(root.get("solve").as(String.class),"%"+searchMap.get("solve")+"%"));
                 }
                 //回复人名称
-                if (StringUtils.isBlank((String)searchMap.get("replyname"))){
+                if (!StringUtils.isBlank((String)searchMap.get("replyname"))){
                     predicateList.add(cb.like(root.get("replyname").as(String.class),"%"+searchMap.get("replyname")+"%"));
                 }
 
                 //大于等于开始时间
-                if (StringUtils.isBlank((String)searchMap.get("replyname"))){
+                if (!StringUtils.isBlank((String)searchMap.get("replyname"))){
                     predicateList.add(cb.greaterThanOrEqualTo(root.get(""),searchMap.get("replyname")+""));
                 }
 
                 //小于等于结束时间
-                if (StringUtils.isBlank((String)searchMap.get("replyname"))){
+                if (!StringUtils.isBlank((String)searchMap.get("replyname"))){
                     predicateList.add(cb.lessThanOrEqualTo(root.get(""),searchMap.get("replyname")+""));
                 }
 
