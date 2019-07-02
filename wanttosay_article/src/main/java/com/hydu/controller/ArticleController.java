@@ -1,7 +1,7 @@
 package com.hydu.controller;
 
 import com.hydu.entity.Article;
-import com.hydu.services.ArticleService;
+import com.hydu.service.ArticleService;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;

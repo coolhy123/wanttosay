@@ -14,6 +14,8 @@
         <module>wanttosay_recruit</module>
         <module>wanttosay_qa</module>
         <module>wanttosay_article</module>
+        <module>wanttosay_gathering</module>
+        <module>wanttosay_spit</module>
     </modules>
 
 

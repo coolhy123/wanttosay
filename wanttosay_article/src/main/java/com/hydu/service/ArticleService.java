@@ -1,4 +1,4 @@
-package com.hydu.services;
+package com.hydu.service;
 
 import com.hydu.dao.ArticleDao;
 import com.hydu.entity.Article;
