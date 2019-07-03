@@ -7,3 +7,5 @@ spring:
     mongodb:
       host: localhost
       database: spitdb
+  redis:
+    host: localhost

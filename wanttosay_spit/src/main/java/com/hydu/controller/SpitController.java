@@ -8,6 +8,7 @@ import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import util.IdWorker;
 
@@ -31,8 +32,11 @@ public class SpitController {
     @Autowired
     private MongoTemplate mongoTemplate;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
+
     /**
-     *
+     *查询所有吐槽
      * @return
      */
     @RequestMapping("/spit")
@@ -41,7 +45,7 @@ public class SpitController {
     }
 
     /**
-     *
+     *查询某一条吐槽记录
      * @param id
      * @return
      */
@@ -51,7 +55,7 @@ public class SpitController {
     }
 
     /**
-     *
+     *新增一条吐槽记录
      * @param spit
      * @return
      */
@@ -62,7 +66,7 @@ public class SpitController {
     }
 
     /**
-     *
+     *删除一条吐槽记录
      * @param id
      * @return
      */
@@ -73,11 +77,12 @@ public class SpitController {
     }
 
     /**
-     *
+     *修改一条吐槽记录
      * @param spit
      * @param id
      * @return
      */
+    @RequestMapping(value = "/{id}",method = RequestMethod.PUT )
     public Result updataSpit(@RequestBody Spit spit,@PathVariable String id){
         spit.set_id(id);
         spitService.updateSpit(spit);
@@ -85,14 +90,36 @@ public class SpitController {
     }
 
     /**
-     *
+     *根据上级ID查询吐槽列表
      * @param parentid
      * @param page
      * @param size
      * @return
      */
+    @RequestMapping(value="/comment/{parentid}/{page}/{size}",method=RequestMethod.PUT )
     public Result findByParentid(@PathVariable String parentid,@PathVariable int page,@PathVariable int size){
         Page<Spit>  pageList = spitService.findByParentid(parentid,page,size);
         return new Result(true, StatusCode.OK,"查询成功",new PageResult<Spit>(pageList.getTotalElements(),pageList.getContent()));
     }
+
+    /**
+     * 控制重复点赞
+     * @param id
+     * @return
+     */
+    @RequestMapping(value="/thumbup/{id}",method=RequestMethod.PUT )
+     public Result updateThumbup(@PathVariable String id){
+        String userid="2023";
+
+            if(redisTemplate.opsForValue().get("thumbup_"+userid+"_"+id)!=null){
+                return new Result(true,StatusCode.OK,"你已经点过赞了");
+            }
+        spitService.updateThumbup(id);
+        redisTemplate.opsForValue().set("thumbup_"+userid+"_"+id,"1");
+        return new Result(true,StatusCode.OK,"点赞成功");
+    }
+
+
+
+
 }
