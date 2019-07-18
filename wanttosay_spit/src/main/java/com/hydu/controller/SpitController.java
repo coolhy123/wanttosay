@@ -39,7 +39,7 @@ public class SpitController {
      *查询所有吐槽
      * @return
      */
-    @RequestMapping("/spit")
+    @RequestMapping(value = "/spit",method = RequestMethod.GET)
     public Result findAll(){
         return new Result(true, StatusCode.OK,"查询成功",spitService.findAll());
     }
@@ -49,7 +49,7 @@ public class SpitController {
      * @param id
      * @return
      */
-    @RequestMapping("/spit")
+    @RequestMapping(value = "/spit/{id}",method = RequestMethod.GET)
     public Result queryOne(@PathVariable String id){
         return new Result(true, StatusCode.OK,"查询成功",spitService.queryOne(id));
     }
@@ -59,7 +59,7 @@ public class SpitController {
      * @param spit
      * @return
      */
-    @RequestMapping("/spit")
+    @RequestMapping(value = "/spit",method = RequestMethod.POST)
     public Result save(@RequestBody Spit spit){
         spitService.save(spit);
         return new Result(true, StatusCode.OK,"新增成功");
@@ -70,7 +70,7 @@ public class SpitController {
      * @param id
      * @return
      */
-    @RequestMapping("/spit")
+    @RequestMapping(value = "/spit",method = RequestMethod.DELETE)
     public Result delete(@PathVariable String id){
         spitService.delete(id);
         return new Result(true, StatusCode.OK,"删除成功");

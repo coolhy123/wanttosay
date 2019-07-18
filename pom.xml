@@ -16,6 +16,8 @@
         <module>wanttosay_article</module>
         <module>wanttosay_gathering</module>
         <module>wanttosay_spit</module>
+        <module>wanttosay_user</module>
+        <module>wantosay_newsearch</module>
     </modules>
 
 
