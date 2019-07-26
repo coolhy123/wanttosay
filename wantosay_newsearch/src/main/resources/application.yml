@@ -1,0 +1,9 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: wanttosay_search
+  data:
+    elasticsearch:
+      cluster-nodes: 129.204.23.55:9300

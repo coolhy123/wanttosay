@@ -1,0 +1,6 @@
+
+spring:
+  rabbitmq:
+    host: 129.204.23.55
+server:
+  port: 2255
