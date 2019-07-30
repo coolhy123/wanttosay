@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
  * 2019/7/19
  */
 @Component
-@RabbitListener(queues="hydu2" )
-public class Costom {
+@RabbitListener(queues="good" )
+public class Costom3 {
     @RabbitHandler
     public  void showMessage(String message){
-        System.out.println("hydu2接收到消息："+message);
+        System.out.println("good接收到消息："+message);
 
     }
 

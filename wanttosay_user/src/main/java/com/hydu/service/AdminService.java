@@ -65,7 +65,7 @@ public class AdminService {
 	 * @param size
 	 * @return
 	 */
-	public Page<Admin> findSearch(Map whereMap, int page, int size) {
+	public Page<Admin> pageSearch(Map whereMap, int page, int size) {
 		Specification<Admin> specification = createSpecification(whereMap);
 		PageRequest pageRequest =  PageRequest.of(page-1, size);
 		return adminDao.findAll(specification, pageRequest);

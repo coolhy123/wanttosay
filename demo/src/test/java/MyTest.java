@@ -1,4 +1,4 @@
-import javafx.application.Application;
+import com.hydu.AppRabbitMQ;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -13,12 +13,33 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes=Application.class)
+@SpringBootTest(classes= AppRabbitMQ.class)//指定程序入口
 public class MyTest {
     @Autowired
     private RabbitTemplate rabbitTemplate;
     @Test
     public void testSend(){
-        rabbitTemplate.convertAndSend("itcast","我要红包");
+        //直接模式
+        rabbitTemplate.convertAndSend("hydu2","测试RabbitMQ");
+
+
+
+    }
+    //分裂模式
+
+    @Test
+    public void testSend2(){
+        //直接模式
+        rabbitTemplate.convertAndSend("test","","分裂模式");
+
+
+    }
+
+    @Test
+    public void testSend3(){
+        //直接模式
+        rabbitTemplate.convertAndSend("topicTest","good.log","topic模式");
+
+
     }
 }

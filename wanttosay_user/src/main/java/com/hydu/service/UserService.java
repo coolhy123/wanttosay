@@ -15,6 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import util.IdWorker;
+import util.JwtUtil;
 
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -27,7 +28,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 服务层
- * 
+ *
  * @author Administrator
  *
  */
@@ -36,7 +37,7 @@ public class UserService {
 
 	@Autowired
 	private UserDao userDao;
-	
+
 	@Autowired
 	private IdWorker idWorker;
 
@@ -53,6 +54,9 @@ public class UserService {
 	private HttpServletRequest request;
 
 	@Autowired
+	private JwtUtil jwtUtil;
+
+	@Autowired
 //	private JwtUtil jwtUtil;
 
 	/**
@@ -63,7 +67,7 @@ public class UserService {
 		return userDao.findAll();
 	}
 
-	
+
 	/**
 	 * 条件查询+分页
 	 * @param whereMap
@@ -77,7 +81,7 @@ public class UserService {
 		return userDao.findAll(specification, pageRequest);
 	}
 
-	
+
 	/**
 	 * 条件查询
 	 * @param whereMap
@@ -182,7 +186,7 @@ public class UserService {
                 if (searchMap.get("personality")!=null && !"".equals(searchMap.get("personality"))) {
                 	predicateList.add(cb.like(root.get("personality").as(String.class), "%"+(String)searchMap.get("personality")+"%"));
                 }
-				
+
 				return cb.and( predicateList.toArray(new Predicate[predicateList.size()]));
 
 			}
@@ -190,6 +194,10 @@ public class UserService {
 
 	}
 
+	/**
+	 * 发送短信
+	 * @param mobile
+	 */
     public void sendSms(String mobile) {
 		//生成六位数字随机数
 		String checkcode = RandomStringUtils.randomNumeric(6);
@@ -204,9 +212,16 @@ public class UserService {
 		System.out.println("验证码为："+checkcode);
 	}
 
+	/**
+	 * 用户登录
+	 * @param mobile
+	 * @param password
+	 * @return
+	 */
 	public User login(String mobile, String password) {
 		User user = userDao.findByMobile(mobile);
 		if(user!=null && encoder.matches(password, user.getPassword())){
+			jwtUtil.createJwt(user.getId(),user.getNickname(),"user");
 			return user;
 		}
 		return null;
