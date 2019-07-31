@@ -1,6 +1,7 @@
 package com.hydu.controller;
 
 
+import com.hydu.client.LabelClient;
 import com.hydu.entity.Problem;
 import com.hydu.service.ProblemService;
 import entity.PageResult;
@@ -18,7 +19,8 @@ import java.util.Map;
  * 2019/6/28
  */
 
-@RestController(value = "/problem")
+@RestController
+@RequestMapping(value = "/problem")
 public class ProblemController {
     @Autowired
     private ProblemService problemService;
@@ -26,11 +28,14 @@ public class ProblemController {
     @Autowired
     private IdWorker idWorker;
 
+    @Autowired
+    private LabelClient labelClient;
+
     /**
      * 查询所有
      * @return
      */
-    @RequestMapping(method= RequestMethod.GET)
+    @RequestMapping(value="/findall",method= RequestMethod.GET)
     public Result findAll(){
         List<Problem> list=problemService.findAll();
         return new Result(true, StatusCode.OK,"查询成功",list);
@@ -75,6 +80,7 @@ public class ProblemController {
      * @param problem
      * @return
      */
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Result save(@RequestBody Problem problem){
          problemService.save(problem);
         return new Result(true,StatusCode.OK,"新增成功");
@@ -140,5 +146,13 @@ public class ProblemController {
     public Result waitList(@PathVariable String labelid , @PathVariable int page, @PathVariable int size){
         Page<Problem> pageList =problemService.newsList(labelid,page,size);
         return  new Result(true,StatusCode.OK,"查询成功",  new PageResult<Problem>(pageList.getTotalElements(), pageList.getContent()) );
+    }
+
+
+    @RequestMapping(value = "/label/{id}",method = RequestMethod.GET)
+    public Result findLabelById(@PathVariable String id){
+        Result result = labelClient.findById(id);
+        System.out.println(result);
+        return result;
     }
 }

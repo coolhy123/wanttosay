@@ -2,7 +2,7 @@ server:
   port: 9004
 spring:
   application:
-    name: wanttosay_article
+    name: wanttosay-article
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/wanttosay_article
@@ -16,5 +16,9 @@ spring:
     port: 6379
   data:
     mongodb:
-      host: 129.204.23.55
+      host: localhost
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
 

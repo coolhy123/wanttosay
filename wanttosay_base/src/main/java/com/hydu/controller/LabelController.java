@@ -27,14 +27,17 @@ public class LabelController {
 
         return new Result(true,StatusCode.OK,"查询成功",list);
     }
-
+    @RequestMapping(value = "/getOne/{id}",method = RequestMethod.GET)
+    public  Result selectOne(@PathVariable("id") String id){
+        return new Result(true,StatusCode.OK,"查询成功",labelService.getOne(id));
+    }
     /**
      * 通过id删除某个标签
      * @param labelId
      * @return
      */
-    @RequestMapping(value = "/{labelId}",method = RequestMethod.GET)
-    public Result findById(@PathVariable("labelId")String labelId){
+    @RequestMapping(value = "/{id}",method = RequestMethod.GET)
+    public Result findById(@PathVariable String labelId){
         labelService.deleteOne(labelId);
         return new Result(true,StatusCode.OK,"删除成功");
     }
@@ -53,12 +56,12 @@ public class LabelController {
 
     /**
      * 修改某个标签
-     * @param labelId
+     * @param id
      * @param label
      * @return
      */
-    @RequestMapping(value = "{labelId}",method = RequestMethod.PUT)
-    public Result update(@PathVariable("labelId") String labelId,@RequestBody Label label){
+    @RequestMapping(value = "{id}",method = RequestMethod.PUT)
+    public Result update(@PathVariable String id,@RequestBody Label label){
         labelService.update(label);
         return new Result(true,StatusCode.OK,"修改成功");
     }

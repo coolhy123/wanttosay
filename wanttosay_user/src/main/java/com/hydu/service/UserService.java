@@ -75,7 +75,7 @@ public class UserService {
 	 * @param size
 	 * @return
 	 */
-	public Page<User> findSearch(Map whereMap, int page, int size) {
+	public Page<User> pageList(Map whereMap, int page, int size) {
 		Specification<User> specification = createSpecification(whereMap);
 		PageRequest pageRequest =  PageRequest.of(page-1, size);
 		return userDao.findAll(specification, pageRequest);

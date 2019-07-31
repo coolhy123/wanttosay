@@ -19,6 +19,7 @@
         <module>wanttosay_user</module>
         <module>wantosay_newsearch</module>
         <module>demo</module>
+        <module>wantosay_eureka</module>
     </modules>
 
 
@@ -104,5 +105,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
+
 
 </project>

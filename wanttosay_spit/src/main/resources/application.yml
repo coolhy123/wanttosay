@@ -1,8 +1,8 @@
 server:
-  port: 9014
+  port: 9006
 spring:
   application:
-    name: tensquare‐spit #指定服务名
+    name: wanttosay-spit #指定服务名
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -20,3 +20,9 @@ spring:
 #  data:
 #    mongodb:
 #      uri: mongodb://user:pass@129.204.23.55:27017/spitdb
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+  prefer-ip-address: true

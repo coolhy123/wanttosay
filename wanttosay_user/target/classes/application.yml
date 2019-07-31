@@ -2,7 +2,7 @@ server:
   port: 9008
 spring:
   application:
-    name: wanttosay_user #指定服务名
+    name: wanttosay-user #指定服务名
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/wanttosay_user
@@ -20,3 +20,9 @@ spring:
     config:
       key:coolhy
       time:360000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+  prefer-ip-address: true

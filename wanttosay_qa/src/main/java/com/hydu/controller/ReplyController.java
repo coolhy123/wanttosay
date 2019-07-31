@@ -12,7 +12,8 @@ import util.IdWorker;
 
 import java.util.Map;
 
-@RestController(value = "/reply")
+@RestController
+@RequestMapping(value = "/reply")
 public class ReplyController {
     @Autowired
     private ReplyService replyService;
@@ -24,7 +25,7 @@ public class ReplyController {
      * 查询所有回答
      * @return
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/findall",method = RequestMethod.GET)
     public Result findAll(){
         return new Result(true,StatusCode.OK,"查询成功",replyService.findAll());
     }
@@ -44,7 +45,7 @@ public class ReplyController {
      * @param reply
      * @return
      */
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
     public Result save(@RequestBody  Reply reply){
         replyService.save(reply);
         return new Result(true,StatusCode.OK,"新增成功");
@@ -55,7 +56,7 @@ public class ReplyController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "/{id}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{id}",method = RequestMethod.DELETE)
     public Result deleteOne(@PathVariable  String  id){
         replyService.deleteOne(id);
         return new Result(true,StatusCode.OK,"删除成功");
@@ -67,7 +68,7 @@ public class ReplyController {
      * @param id
      * @return
      */
-    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
+    @RequestMapping(value = "/update/{id}",method = RequestMethod.PUT)
     public Result updateReply(@RequestBody Reply reply,@PathVariable String id){
         reply.setId(id);
         replyService.updateReply(reply);
@@ -79,6 +80,7 @@ public class ReplyController {
      * @param searchMap
      * @return
      */
+    @RequestMapping(value = "/serach",method = RequestMethod.POST)
     public Result replyList(@RequestBody Map searchMap){
         return new Result(true,StatusCode.OK,"查询成功", replyService.replyList(searchMap));
     }
@@ -90,6 +92,7 @@ public class ReplyController {
      * @param size
      * @return
      */
+    @RequestMapping(value = "/serach/{page}/{size}",method = RequestMethod.POST)
     public Result pageList(@RequestBody Map searchMap,@PathVariable  int page,@PathVariable int size){
         Page<Reply> pageList=replyService.pageList(searchMap,page,size);
         return new Result(true,StatusCode.OK,"查询成功",new PageResult<Reply>(pageList.getTotalElements(),pageList.getContent()));
