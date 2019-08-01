@@ -29,6 +29,7 @@ public class LabelController {
     }
     @RequestMapping(value = "/getOne/{id}",method = RequestMethod.GET)
     public  Result selectOne(@PathVariable("id") String id){
+        System.out.println("负载均衡");
         return new Result(true,StatusCode.OK,"查询成功",labelService.getOne(id));
     }
     /**

@@ -74,7 +74,7 @@ public class JwtUtil {
     public Claims parseJwt(String jwtStr){
         return Jwts.parser()
                 //申明盐
-                .setSigningKey(key)
+                .setSigningKey("coolhy")
                 //传入token
                 .parseClaimsJws(jwtStr)
                 .getBody();

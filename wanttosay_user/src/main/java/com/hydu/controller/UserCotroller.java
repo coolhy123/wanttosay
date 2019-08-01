@@ -8,6 +8,7 @@ import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 import util.JwtUtil;
 
@@ -20,8 +21,9 @@ import java.util.Map;
  * 2019/7/30
  */
 
-@CrossOrigin
-@RestController(value = "/user")
+
+@RestController
+@RequestMapping(value = "/user")
 public class UserCotroller {
     @Autowired
     private JwtUtil jwtUtil;
@@ -37,7 +39,7 @@ public class UserCotroller {
      * 查询所有的用户
      * @return
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/findAll",method = RequestMethod.GET)
     public Result findAll(){
         return new Result(true, StatusCode.OK,"查询成功", userService.findAll());
     }
@@ -49,7 +51,7 @@ public class UserCotroller {
      * @param size
      * @return
      */
-    @RequestMapping(value="/search/{page/{size}",method = RequestMethod.POST)
+    @RequestMapping(value="/search/{page}/{size}",method = RequestMethod.POST)
     public Result pageList(@RequestBody Map webserach, @PathVariable int page, @PathVariable int size){
         Page<User> userPage=userService.pageList(webserach,page,size);
         return new Result(true,StatusCode.OK,"{查询成功",new PageResult<User>(userPage.getTotalElements(),userPage.getContent()));
@@ -107,8 +109,8 @@ public class UserCotroller {
      * @param mobile
      * @return
      */
-    @RequestMapping(value="/sendSms",method = RequestMethod.GET)
-    public Result sendSms(@PathVariable String mobile){
+    @RequestMapping(value="/sendSms/{mobile}",method = RequestMethod.POST)
+    public Result sendSms(@PathVariable("mobile") String mobile){
         userService.sendSms(mobile);
         return new Result(true,StatusCode.OK,"短信发送成功");
     }
@@ -119,7 +121,7 @@ public class UserCotroller {
      * @return
      */
     @RequestMapping(value="/login",method = RequestMethod.POST)
-    public Result login(@PathVariable User user){
+    public Result login(@RequestBody User user){
         user=userService.login(user.getMobile(),user.getPassword());
         if(user==null){
             return new Result(false,StatusCode.LOGINERROR,"登录失败");
@@ -139,7 +141,7 @@ public class UserCotroller {
      * @param code
      * @return
      */
-    @RequestMapping(value="/regist",method = RequestMethod.POST)
+    @RequestMapping(value="/regist/{code}",method = RequestMethod.POST)
     public Result  regist(@RequestBody User user,@PathVariable String code){
             String checkCode = (String)redisTemplate.opsForValue().get("checkcode_"+user.getMobile());
             if(checkCode.isEmpty()){
