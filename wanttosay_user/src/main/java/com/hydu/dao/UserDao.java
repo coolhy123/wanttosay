@@ -14,6 +14,11 @@ import org.springframework.data.jpa.repository.Query;
 public interface UserDao extends JpaRepository<User,String>,JpaSpecificationExecutor<User>{
 	public User findByMobile(String mobile);
 
+    /**
+     * 更新粉丝数
+     * @param x
+     * @param friendid
+     */
 	@Modifying
 	@Query(value = "update tb_user set fanscount=fanscount+? where id=?", nativeQuery = true)
     public void updatefanscount(int x, String friendid);
@@ -21,4 +26,22 @@ public interface UserDao extends JpaRepository<User,String>,JpaSpecificationExec
     @Modifying
     @Query(value = "update tb_user set followcount=followcount+? where id=?", nativeQuery = true)
     public void updatefollowcount(int x, String userid);
+
+    /**
+     * 更新粉丝数
+     * @param userid
+     * @param x
+     */
+    @Modifying
+    @Query(value = "update User u set u.fanscount=u.fanscount+?2 where u.id=?1")
+    public void incFanscount(String userid,int x);
+
+    /**
+     * 更新关注数
+     * @param x
+     * @param userid
+     */
+    @Modifying
+    @Query("update User u set u.followcount=u.followcount+?2 where u.id=?1")
+    public void incFollowcount(String userid,int x);
 }

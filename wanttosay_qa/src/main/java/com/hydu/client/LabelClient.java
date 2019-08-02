@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * 2019/7/31
  */
 @Component
-@FeignClient("wanttosay-base")
+@FeignClient(value = "wanttosay-base" ,fallback = LabelClientImpl.class)
 public interface LabelClient {
 
     @RequestMapping(value = "/label/getOne/{id}", method = RequestMethod.GET)

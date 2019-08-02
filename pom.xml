@@ -21,6 +21,8 @@
         <module>demo</module>
         <module>wantosay_eureka</module>
         <module>wanttosay_friend</module>
+        <module>wanttosay_manager</module>
+        <module>wanttosay_web</module>
     </modules>
 
 

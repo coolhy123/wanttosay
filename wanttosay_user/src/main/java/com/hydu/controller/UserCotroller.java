@@ -58,6 +58,16 @@ public class UserCotroller {
 
     }
 
+    @RequestMapping(value = "/incfans/{userid}/{x}",method = RequestMethod.POST)
+    public void incFanscount(@PathVariable String userid,@PathVariable int x){
+        userService.incFanscount(userid,x);
+    }
+
+    @RequestMapping(value = "/incfollow/{userid}/{x}",method = RequestMethod.POST)
+    public void incFollowcount(@PathVariable String userid,@PathVariable int x){
+        userService.incFollowcount(userid,x);
+    }
+
     /**
      * 条件查询用户
      * @param webserach
@@ -143,13 +153,13 @@ public class UserCotroller {
      */
     @RequestMapping(value="/regist/{code}",method = RequestMethod.POST)
     public Result  regist(@RequestBody User user,@PathVariable String code){
-            String checkCode = (String)redisTemplate.opsForValue().get("checkcode_"+user.getMobile());
-            if(checkCode.isEmpty()){
-                return new Result(false,StatusCode.ACCESSERROR,"请先获取验证码");
-            }
-            if (checkCode.equals(code)){
-                return new Result(false,StatusCode.ERROR,"请输入正确的验证码");
-            }
+//            String checkCode = (String)redisTemplate.opsForValue().get("checkcode_"+user.getMobile());
+//            if(checkCode.isEmpty()){
+//                return new Result(false,StatusCode.ACCESSERROR,"请先获取验证码");
+//            }
+//            if (checkCode.equals(code)){
+//                return new Result(false,StatusCode.ERROR,"请输入正确的验证码");
+//            }
             userService.add(user);
             return new Result(true,StatusCode.OK,"注册成功");
     }
