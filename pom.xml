@@ -23,6 +23,8 @@
         <module>wanttosay_friend</module>
         <module>wanttosay_manager</module>
         <module>wanttosay_web</module>
+        <module>wanttosay_config</module>
+        <module>wanttosay_sms</module>
     </modules>
 
 

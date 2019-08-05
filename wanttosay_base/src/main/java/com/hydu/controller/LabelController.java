@@ -6,6 +6,8 @@ import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,10 +15,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/label")
+@RefreshScope
 public class LabelController {
     @Autowired
     private LabelService labelService;
 
+    @Value("${sms.ip}")
+    private String ip;
     /**
      * 查询所有标签
      * @return
@@ -24,7 +29,7 @@ public class LabelController {
     @RequestMapping(method = RequestMethod.GET)
     public Result findAll(){
        List<Label> list= labelService.selectAll();
-
+        System.out.println("ip===="+ip);
         return new Result(true,StatusCode.OK,"查询成功",list);
     }
     @RequestMapping(value = "/getOne/{id}",method = RequestMethod.GET)

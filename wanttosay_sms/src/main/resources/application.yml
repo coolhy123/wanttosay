@@ -1,0 +1,19 @@
+server:
+  port: 9009
+spring:
+  rabbitmq:
+    host: 129.204.23.55
+  application:
+    name: wantttosay-sms
+aliyun:
+  sms:
+    accessKeyId: LTAIQIbkt5jAZFGI
+    accessKeySecret: W2fiueTm8CFufVo9VKBc8645ck2aPJ
+    template_code: SMS_171854884
+    sign_name: coolhy
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer-ip-address: true

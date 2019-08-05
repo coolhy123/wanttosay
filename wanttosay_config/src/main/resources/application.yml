@@ -1,0 +1,20 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: wanttosay-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/coolhy/wanttosay_config.git
+          skip-ssl-validation: true
+          password: Coolhy520123
+          username: coolhy
+  rabbitmq:
+    host: 129.204.23.55
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
