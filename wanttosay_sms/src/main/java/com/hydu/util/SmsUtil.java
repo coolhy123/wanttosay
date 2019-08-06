@@ -62,6 +62,7 @@ public class SmsUtil {
         request.putQueryParameter("PhoneNumbers", mobile);
         request.putQueryParameter("SignName", sign_name);
         request.putQueryParameter("TemplateCode", template_code);
+        request.putQueryParameter("TemplateParam", param);
         CommonResponse response =null;
         try {
             response= client.getCommonResponse(request);

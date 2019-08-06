@@ -121,6 +121,10 @@ public class UserCotroller {
      */
     @RequestMapping(value="/sendSms/{mobile}",method = RequestMethod.POST)
     public Result sendSms(@PathVariable("mobile") String mobile){
+        String checkCode = (String)redisTemplate.opsForValue().get("checkcode_"+mobile);
+        if(checkCode!=null){
+            return new Result(false,StatusCode.ERROR,"该手机号已经注册");
+        }
         userService.sendSms(mobile);
         return new Result(true,StatusCode.OK,"短信发送成功");
     }
@@ -153,13 +157,13 @@ public class UserCotroller {
      */
     @RequestMapping(value="/regist/{code}",method = RequestMethod.POST)
     public Result  regist(@RequestBody User user,@PathVariable String code){
-//            String checkCode = (String)redisTemplate.opsForValue().get("checkcode_"+user.getMobile());
-//            if(checkCode.isEmpty()){
-//                return new Result(false,StatusCode.ACCESSERROR,"请先获取验证码");
-//            }
-//            if (checkCode.equals(code)){
-//                return new Result(false,StatusCode.ERROR,"请输入正确的验证码");
-//            }
+            String checkCode = (String)redisTemplate.opsForValue().get("checkcode_"+user.getMobile());
+            if(checkCode.isEmpty()){
+                return new Result(false,StatusCode.ACCESSERROR,"请先获取验证码");
+            }
+            if (!checkCode.equals(code)){
+                return new Result(false,StatusCode.ERROR,"请输入正确的验证码");
+            }
             userService.add(user);
             return new Result(true,StatusCode.OK,"注册成功");
     }

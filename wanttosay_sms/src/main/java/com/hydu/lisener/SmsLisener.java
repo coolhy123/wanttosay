@@ -32,7 +32,7 @@ public class SmsLisener {
         System.out.println("手机号："+map.get("mobile"));
         System.out.println("验证码："+map.get("checkcode"));
         try {
-            smsUtil.sendSms(map.get("mobile"),template_code,sign_name,"{\"number\":\""+ map.get("checkcode") +"\"}");
+            smsUtil.sendSms(map.get("mobile"),template_code,sign_name,"{\"code\":\""+ map.get("checkcode") +"\"}");
             } catch (Exception e) {
                 e.printStackTrace();
             }
